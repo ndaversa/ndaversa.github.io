@@ -26,6 +26,10 @@
   <!-- End Google Analytics -->
   <style>
 
+  svg {
+    width: 100%;
+  }
+
   .node {
     stroke: #fff;
     stroke-width: 1.5px;
@@ -55,7 +59,7 @@ var force = d3.layout.force()
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height)
-    .attr("viewbox", "0 0 " + width + " " + height);
+    .attr("viewBox", "0 0 " + width + " " + height);
 
 d3.json("ndaversa.json", function(error, graph) {
   force
