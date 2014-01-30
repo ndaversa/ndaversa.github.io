@@ -3,8 +3,8 @@
   <head>
     <title>Nino D'Aversa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,11 +26,122 @@
   <!-- End Google Analytics -->
   <style>
 
+  body {
+    font-family: Abel;
+  }
+
+  ul {
+    font-size: 22px;
+    line-height: 1.3em;
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    display: inline-block;
+    margin-right: 30px;
+    text-align: right;
+  }
+
+  #topNav ul li.active-link > a,
+  #topNav ul li.active-link > a:visited {
+    color: #000;
+  }
+
+  #topNav li.active-link a:after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #aaa;
+    width: 50%;
+    margin-left: 25%;
+    left: 50%;
+    bottom: 1px;
+  }
+
+  h2, p {
+    font-size: 28px;
+    color: #111;
+    letter-spacing: 0px;
+    line-height: 1.4em;
+    font-weight: normal;
+    margin: 1em 0 0.5em;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.3em;
+    margin: 0 0 1em;
+    color: #444;
+  }
+
+  a {
+    color: #327ac8;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #ff7e42;
+    outline: 0;
+  }
+
   svg {
     width: 320px;
     height: 320px;
     display: block;
     margin: 25px auto;
+  }
+
+  header {
+    padding: 20px 25px;
+    height: 46px;
+    margin-bottom: 20px;
+  }
+
+  #topNav {
+    display: inline-block;
+  }
+
+  #topNav li a,
+  #topNav li a:visited {
+    line-height: 44px;
+    color: #9c9c9c;
+  }
+
+  #topNav li a:hover {
+    color: #000;
+  }
+
+  #header-social {
+    display: inline-block;
+    float: right;
+  }
+
+  #header-social a,
+  #header-social a:visited {
+    margin: 7px 0 10px 21px;
+    color: #9c9c9c;
+  }
+
+  #header-social a:hover {
+    color: #000;
+  }
+
+  #logo {
+    display: inline-block;
+    float: left;
+    margin-right: 30px;
+  }
+
+  #logo img {
+    width: 110px;
+    height: 46px;
+  }
+
+  .content {
+    padding: 0 17px 17px 17px;
   }
 
   .node {
@@ -46,6 +157,28 @@
   </style>
   </head>
   <body>
+<header>
+
+<div id="logo">
+  <a href="/">
+    <img src="images/logo.png" alt="Nino D'Aversa">
+  </a>
+</div>
+
+<div id="topNav">
+  <ul>
+    <li class="active-link"><a href="/">about</a></li>
+    <li><a href="http://blog.ndaversa.com">blog</a></li>
+    <li><a href="resume.pdf">resume</a></li>
+  </ul>
+</div>
+<div id="header-social">
+  <a href="https://twitter.com/ndaversa" target="_blank" class="fa fa-2x fa-twitter"></a>
+  <a href="https://github.com/ndaversa" target="_blank" class="fa fa-2x fa-github"></a>
+  <a href="http://www.linkedin.com/in/ndaversa" target="_blank" class="fa fa-2x fa-linkedin"></a>
+</div>
+</header>
+<div class="content">
 <h2>Hi, I'm Nino D'Aversa and I love to build things.</h2>
 <p> As the Team Lead of Web Development at 
   <a href="http://www.wattpad.com/" target="_blank">Wattpad</a>
@@ -56,7 +189,8 @@
   <a href="http://github.com/blackberry/Ripple-UI" target="_blank">Ripple</a>
   and
   <a href="http://hg.mozilla.org/mozilla-central" target="_blank">Firefox</a>.
-</p>
+  </p>
+</div>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
@@ -110,9 +244,5 @@ d3.json("ndaversa.json", function(error, graph) {
 });
 
 </script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> -->
   </body>
 </html>
